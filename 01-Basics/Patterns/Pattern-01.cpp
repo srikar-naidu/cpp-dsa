@@ -15,7 +15,7 @@ using namespace std;
 void pattern(int N) {
     for (int i = 0; i < N; i++) {        // Outer loop to handle rows
         for (int j = 0; j < N; j++) {    // Inner loop to handle columns for each row
-            cout << "* ";
+            cout << "*";
         }
         cout << endl;
     }
