@@ -9,7 +9,7 @@ A number which completely divides another number is called it's divisor.*/
 using namespace std;
 vector<int> findDivisors(int n) {
     vector<int> divisors;
-    for (int i = 1; i <= sqrt(n); i++) {
+    for (int i = 1; i <= sqrt(n); i++) { //sqrt(n) is used to reduce the number of iterations(as divisiors come in pairs)
         if (n % i == 0) {
             divisors.push_back(i); // Add the divisor
             if (i != n / i) { // Check to avoid adding the square root twice
