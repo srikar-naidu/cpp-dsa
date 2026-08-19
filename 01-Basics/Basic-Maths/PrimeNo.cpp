@@ -16,9 +16,15 @@ bool isPrime(int n) {
         return false;
     }
     for (int i = 5; i * i <= n; i += 6) {
-        if (n % i == 0 || n % (i + 2) == 0) {
+        if (n % i == 0 || n % (i + 2) == 0) { //check the comment below for explanation of this condition
             return false;
         }
     }
     return true;
 }
+/*If a number isn't divisible by 2 or 3,
+you can completely skip all multiples of 2 (4, 6, 8, 10...) and 3 (6, 9, 12, 15...).
+Once you throw out all multiples of 2 and 3,
+the only numbers left to check are: 5, 7,    11, 13,   17, 19,   23, 25,   29, 31...
+Notice the pattern: They always come in pairs spaced by 2 (e.g., 5 and 5+2=7).
+The loop jumps by 6 each time (i += 6) and checks both numbers in the pair (i and i + 2).*/
