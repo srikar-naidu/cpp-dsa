@@ -14,7 +14,7 @@ while (left <= mid && right <= high) {
     if (arr[left] <= arr[right])
         temp.push_back(arr[left++]); //left++ because we are moving the pointer to the next element in the left subarray
     else
-        temp.push_back(arr[right++]);
+        temp.push_back(arr[right++]); //right++ because we are moving the pointer to the next element in the right subarray
 }
 while (left <= mid)
     temp.push_back(arr[left++]); // Copy any remaining elements from the left subarray
